@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func swap(array []int, firstIndex int, secondIndex int) {
 	temp := array[firstIndex]
 	array[firstIndex] = array[secondIndex]
@@ -28,8 +26,8 @@ func selectionSort(array []int) {
 	}
 }
 
-func main() {
-	array := []int{3, 5, 6, 1, 8, 2, 9}
-	selectionSort(array)
-	fmt.Println(array)
-}
+// func main() {
+// 	array := []int{3, 5, 6, 1, 8, 2, 9}
+// 	selectionSort(array)
+// 	fmt.Println(array)
+// }
