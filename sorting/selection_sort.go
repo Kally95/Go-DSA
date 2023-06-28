@@ -1,10 +1,10 @@
 package main
 
-func swap(array []int, firstIndex int, secondIndex int) {
-	temp := array[firstIndex]
-	array[firstIndex] = array[secondIndex]
-	array[secondIndex] = temp
-}
+// func swap(array []int, firstIndex int, secondIndex int) {
+// 	temp := array[firstIndex]
+// 	array[firstIndex] = array[secondIndex]
+// 	array[secondIndex] = temp
+// }
 
 func indexOfMin(array []int, startIndex int) int {
 	minValue := array[startIndex]
