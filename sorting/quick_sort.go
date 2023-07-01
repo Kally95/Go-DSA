@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package sorting
 
 func swap(array []int, firstIndex int, secondIndex int) {
 	temp := array[firstIndex]
@@ -37,10 +35,4 @@ func quickSort(array []int, lb int, ub int) {
 		quickSort(array, lb, loc-1)
 		quickSort(array, loc+1, ub)
 	}
-}
-
-func main() {
-	array := []int{3, 5, 6, 1, 8, 2, 9}
-	quickSort(array, 0, len(array)-1)
-	fmt.Println(array)
 }

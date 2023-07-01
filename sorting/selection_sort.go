@@ -1,10 +1,10 @@
-package main
+package sorting
 
-// func swap(array []int, firstIndex int, secondIndex int) {
-// 	temp := array[firstIndex]
-// 	array[firstIndex] = array[secondIndex]
-// 	array[secondIndex] = temp
-// }
+func swap(array []int, firstIndex int, secondIndex int) {
+	temp := array[firstIndex]
+	array[firstIndex] = array[secondIndex]
+	array[secondIndex] = temp
+}
 
 func indexOfMin(array []int, startIndex int) int {
 	minValue := array[startIndex]
@@ -25,9 +25,3 @@ func selectionSort(array []int) {
 		swap(array, i, minVal)
 	}
 }
-
-// func main() {
-// 	array := []int{3, 5, 6, 1, 8, 2, 9}
-// 	selectionSort(array)
-// 	fmt.Println(array)
-// }

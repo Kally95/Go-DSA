@@ -1,4 +1,4 @@
-package main
+package sorting
 
 func insertionSort(array []int) {
 	for i := 0; i < len(array); i++ {
@@ -9,9 +9,3 @@ func insertionSort(array []int) {
 		}
 	}
 }
-
-// func main() {
-// 	array := []int{5, 4, 10, 1, 6, 2}
-// 	insertionSort(array)
-// 	fmt.Println(array)
-// }
