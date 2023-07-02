@@ -29,10 +29,10 @@ func partition(array []int, lb int, ub int) int {
 	return end
 }
 
-func quickSort(array []int, lb int, ub int) {
+func QuickSort(array []int, lb int, ub int) {
 	if lb < ub {
 		loc := partition(array, lb, ub)
-		quickSort(array, lb, loc-1)
-		quickSort(array, loc+1, ub)
+		QuickSort(array, lb, loc-1)
+		QuickSort(array, loc+1, ub)
 	}
 }
