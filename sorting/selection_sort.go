@@ -19,7 +19,7 @@ func indexOfMin(array []int, startIndex int) int {
 	return minIndex
 }
 
-func selectionSort(array []int) {
+func SelectionSort(array []int) {
 	for i := 0; i < len(array); i++ {
 		minVal := indexOfMin(array, i)
 		swap1(array, i, minVal)
