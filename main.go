@@ -19,4 +19,10 @@ func main() {
 	array := []int{1, 3, 6, 8, 11, 13, 16, 19, 20}
 	target := 11
 	fmt.Println(search.BinarySearch(array, target))
+
+	ds.Push(1)
+	ds.Push(2)
+	ds.Push(3)
+	ds.Push(4)
+	ds.Print()
 }
