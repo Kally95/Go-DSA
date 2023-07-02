@@ -7,12 +7,12 @@ type node struct {
 	data int
 }
 
-type linkedList struct {
+type LinkedList struct {
 	head   *node
 	length int
 }
 
-func (l *linkedList) prepend(value int) {
+func (l *LinkedList) Prepend(value int) {
 	newNode := node{data: value}
 	if l.head != nil {
 		newNode.next = l.head
@@ -24,7 +24,7 @@ func (l *linkedList) prepend(value int) {
 	}
 }
 
-func (l *linkedList) printLinkedList() {
+func (l *LinkedList) PrintLinkedList() {
 	if l.head == nil {
 		return
 	}
@@ -35,7 +35,7 @@ func (l *linkedList) printLinkedList() {
 	}
 }
 
-func (l *linkedList) deleteNodeWithVal(value int) {
+func (l *LinkedList) DeleteNodeWithVal(value int) {
 	if l.length == 0 {
 		return
 	}

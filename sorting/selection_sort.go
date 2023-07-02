@@ -1,6 +1,6 @@
 package sorting
 
-func swap(array []int, firstIndex int, secondIndex int) {
+func swap1(array []int, firstIndex int, secondIndex int) {
 	temp := array[firstIndex]
 	array[firstIndex] = array[secondIndex]
 	array[secondIndex] = temp
@@ -22,6 +22,6 @@ func indexOfMin(array []int, startIndex int) int {
 func selectionSort(array []int) {
 	for i := 0; i < len(array); i++ {
 		minVal := indexOfMin(array, i)
-		swap(array, i, minVal)
+		swap1(array, i, minVal)
 	}
 }
