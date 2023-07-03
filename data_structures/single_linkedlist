@@ -1,0 +1,36 @@
+package data_structures
+
+type node struct {
+	Value int
+	Next    *node
+
+}
+
+type LinkedListNew struct {
+	Head *node
+	Length int
+}
+
+
+func (l *LinkedListNew) Prepend(value int) {
+	newNode := node{Value: value}
+	if l.length == 0 {
+		l.head = &newNode
+		l.Length++
+	} else {
+		newNode.next = l.head
+		l.head = &newNode 
+		l.length++
+	}
+}
+
+func (l *LinkedListNew) PrintLL() {
+	if l.length == 0 {
+		return
+	}
+	currentNode := l.head
+	for currentNode != nil {
+		fmt.Print(currentNode.Value " ->")
+		currentNode = l.head.next
+	}
+}

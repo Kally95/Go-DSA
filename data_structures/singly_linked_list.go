@@ -16,6 +16,42 @@ func NewLinkedListNode(value int) *SinglyLinkedListNode {
 	}
 }
 
+func MiddleNode() int {
+	if head == nil {
+		return -1
+	}
+	mid := LengthOfList() / 2
+	tempHead := head
+	counter := 0
+	for counter < mid {
+		tempHead = tempHead.Next
+		counter++
+	}
+	return tempHead.Val
+}
+
+func LengthOfList() int {
+	tempHead := head
+	counter := 0
+	for tempHead != nil {
+		counter++
+		tempHead = tempHead.Next
+	}
+	return counter
+}
+
+func EvenValues() int {
+	tempHead := head
+	counter := 0
+	for tempHead != nil {
+		if tempHead.Val%2 == 0 {
+			counter++
+		}
+		tempHead = tempHead.Next
+	}
+	return counter
+}
+
 func Push(value int) {
 	// Create a new node with value as the input
 	newNode := NewLinkedListNode(value)
