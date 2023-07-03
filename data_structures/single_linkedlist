@@ -1,36 +1,33 @@
 package data_structures
 
+import "fmt"
+
 type node struct {
 	Value int
-	Next    *node
-
+	Next  *node
 }
 
 type LinkedListNew struct {
-	Head *node
+	Head   *node
 	Length int
 }
 
-
 func (l *LinkedListNew) Prepend(value int) {
 	newNode := node{Value: value}
-	if l.length == 0 {
-		l.head = &newNode
+	if l.Length == 0 {
+		l.Head = &newNode
 		l.Length++
 	} else {
-		newNode.next = l.head
-		l.head = &newNode 
-		l.length++
+		newNode.Next = l.Head
+		l.Head = &newNode
+		l.Length++
 	}
 }
 
 func (l *LinkedListNew) PrintLL() {
-	if l.length == 0 {
-		return
-	}
-	currentNode := l.head
+	currentNode := l.Head
 	for currentNode != nil {
-		fmt.Print(currentNode.Value " ->")
-		currentNode = l.head.next
+		fmt.Println(currentNode.Value)
+		currentNode = currentNode.Next
 	}
 }
