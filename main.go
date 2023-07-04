@@ -11,6 +11,7 @@ func main() {
 	myList.Prepend(3)
 	myList.Prepend(154)
 	myList.Prepend(123)
+	myList.InsertAtElement(111, 3)
 	myList.PrintLL()
 
 	// ds.Push(1)
