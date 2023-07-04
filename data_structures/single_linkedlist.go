@@ -29,7 +29,7 @@ func (l *LinkedListNew) Prepend(value int) {
 func (l *LinkedListNew) PrintLL() {
 	currentNode := l.Head
 	for currentNode != nil {
-		fmt.Println(currentNode.Data)
+		fmt.Print(currentNode.Data, "-> ")
 		currentNode = currentNode.Next
 	}
 }
@@ -39,8 +39,36 @@ func (l *LinkedListNew) PrependTail(value int) {
 	if l.Head == nil {
 		l.Head = &newNode
 		l.Tail = &newNode
+		l.Length++
 	} else {
 		l.Tail.Next = &newNode
 		l.Tail = &newNode
+		l.Length++
 	}
+}
+
+func (l *LinkedListNew) InsertAtElement(value int, index int) {
+	newNode := Node{Data: value}
+	if index > l.Length {
+		return
+	}
+	if index == 0 {
+		l.Prepend(value)
+	}
+	if index == l.Length-1 {
+		l.PrependTail(value)
+	}
+	currentNode := l.Head
+	counter := 0
+	for counter <= index-1 {
+		if counter+1 == index {
+			newNode.Next = currentNode.Next
+			currentNode.Next = &newNode
+			l.Length++
+			return
+		}
+		counter++
+		currentNode = currentNode.Next
+	}
+
 }
