@@ -39,9 +39,11 @@ func (l *LinkedListNew) PrependTail(value int) {
 	if l.Head == nil {
 		l.Head = &newNode
 		l.Tail = &newNode
+		l.Length++
 	} else {
 		l.Tail.Next = &newNode
 		l.Tail = &newNode
+		l.Length++
 	}
 }
 
@@ -62,6 +64,7 @@ func (l *LinkedListNew) InsertAtElement(value int, index int) {
 		if counter+1 == index {
 			newNode.Next = currentNode.Next
 			currentNode.Next = &newNode
+			l.Length++
 			return
 		}
 		counter++

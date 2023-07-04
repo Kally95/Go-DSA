@@ -13,6 +13,7 @@ func main() {
 	myList.Prepend(3)
 	myList.Prepend(154)
 	myList.Prepend(123)
+	myList.Prepend(122133)
 	fmt.Println(myList.Length)
 	myList.InsertAtElement(111, 4)
 	myList.PrintLL()
