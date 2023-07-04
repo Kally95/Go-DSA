@@ -2,19 +2,19 @@ package data_structures
 
 import "fmt"
 
-type node struct {
-	Value int
-	Next  *node
+type Node struct {
+	Next *Node
+	Data int
 }
 
 type LinkedListNew struct {
-	Head   *node
-	Tail   *node
+	Head   *Node
+	Tail   *Node
 	Length int
 }
 
 func (l *LinkedListNew) Prepend(value int) {
-	newNode := node{Value: value}
+	newNode := Node{Data: value}
 	if l.Length == 0 {
 		l.Head = &newNode
 		l.Tail = &newNode
@@ -29,13 +29,13 @@ func (l *LinkedListNew) Prepend(value int) {
 func (l *LinkedListNew) PrintLL() {
 	currentNode := l.Head
 	for currentNode != nil {
-		fmt.Println(currentNode.Value)
+		fmt.Println(currentNode.Data)
 		currentNode = currentNode.Next
 	}
 }
 
 func (l *LinkedListNew) PrependTail(value int) {
-	newNode := node{Value: value}
+	newNode := Node{Data: value}
 	if l.Head == nil {
 		l.Head = &newNode
 		l.Tail = &newNode
