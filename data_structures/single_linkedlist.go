@@ -45,14 +45,21 @@ func (l *LinkedListNew) PrependTail(value int) {
 	}
 }
 
-func (l *LinkedListNew) InsertAtElement(value int, element int) {
-	// 3 -> 5 -> 9 -> 8 -> 12
-	// size is 5
+func (l *LinkedListNew) InsertAtElement(value int, index int) {
 	newNode := Node{Data: value}
+	if index > l.Length {
+		return
+	}
+	if index == 0 {
+		l.Prepend(value)
+	}
+	if index == l.Length-1 {
+		l.PrependTail(value)
+	}
 	currentNode := l.Head
 	counter := 0
-	for counter <= element-1 {
-		if counter+1 == element {
+	for counter <= index-1 {
+		if counter+1 == index {
 			newNode.Next = currentNode.Next
 			currentNode.Next = &newNode
 			return
