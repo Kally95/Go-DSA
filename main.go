@@ -25,11 +25,18 @@ func main() {
 	// fmt.Println(ds.EvenValues())
 	// fmt.Println(ds.MiddleNode())
 
-	dll := ds.DoubleLinkedList{}
-	dll.PrependDLL(5)
-	dll.PrependDLL(6)
-	dll.PrependDLL(7)
-	dll.PrependDLL(9)
-	dll.PrintDLL()
-	dll.PrintDLLReverse()
+	// dll := ds.DoubleLinkedList{}
+	// dll.PrependDLL(5)
+	// dll.PrependDLL(6)
+	// dll.PrependDLL(7)
+	// dll.PrependDLL(9)
+	// dll.PrintDLL()
+	// dll.PrintDLLReverse()
+
+	cll := ds.CircularLinkedList{}
+	cll.PrependCLL(5)
+	cll.PrependCLL(7)
+	cll.PrependCLL(8)
+	cll.PrependCLL(12)
+	cll.DisplayCircularLL()
 }
