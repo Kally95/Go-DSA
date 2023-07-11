@@ -34,11 +34,10 @@ func (dll *DoubleLinkedList) PrintDLL() {
 
 	currentNode := dll.Head
 	for currentNode != nil {
-		if currentNode.Next == nil {
-			fmt.Println(currentNode.Value)
-			break
+		fmt.Print(currentNode.Value)
+		if currentNode.Next != nil {
+			fmt.Print("=>")
 		}
-		fmt.Print(currentNode.Value, " => ")
 		currentNode = currentNode.Next
 	}
 }
@@ -50,11 +49,10 @@ func (dll *DoubleLinkedList) PrintDLLReverse() {
 
 	currentNode := dll.Tail
 	for currentNode != nil {
-		if currentNode.Previous == nil {
-			fmt.Println(currentNode.Value)
-			break
+		fmt.Print(currentNode.Value)
+		if currentNode.Previous != nil {
+			fmt.Print("=>")
 		}
-		fmt.Print(currentNode.Value, " => ")
 		currentNode = currentNode.Previous
 	}
 }
