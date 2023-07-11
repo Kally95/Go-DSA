@@ -46,3 +46,19 @@ func (cll *CircularLinkedList) DisplayCircularLL() {
 	}
 	fmt.Println()
 }
+
+func (cll *CircularLinkedList) HasCycle() bool {
+	if cll.Head == nil {
+		return false
+	}
+	fast := cll.Head.Next
+	slow := cll.Head
+	for fast != nil && slow != nil {
+		if fast == slow {
+			return true
+		}
+		fast = fast.Next.Next
+		slow = slow.Next
+	}
+	return false
+}

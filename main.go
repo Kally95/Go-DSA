@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	ds "github.com/Kally95/Go-DSA/data_structures"
 )
 
@@ -39,4 +41,5 @@ func main() {
 	cll.PrependCLL(8)
 	cll.PrependCLL(12)
 	cll.DisplayCircularLL()
+	fmt.Println(cll.HasCycle())
 }
