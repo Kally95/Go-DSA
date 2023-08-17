@@ -35,11 +35,19 @@ func main() {
 	// dll.PrintDLL()
 	// dll.PrintDLLReverse()
 
-	cll := ds.CircularLinkedList{}
-	cll.PrependCLL(5)
-	cll.PrependCLL(7)
-	cll.PrependCLL(8)
-	cll.PrependCLL(12)
-	cll.DisplayCircularLL()
-	fmt.Println(cll.HasCycle())
+	// cll := ds.CircularLinkedList{}
+	// cll.PrependCLL(5)
+	// cll.PrependCLL(7)
+	// cll.PrependCLL(8)
+	// cll.PrependCLL(12)
+	// cll.DisplayCircularLL()
+	// fmt.Println(cll.HasCycle())
+
+	stack := ds.NewStack[int]()
+	stack.Push(10)
+	stack.Push(15)
+	stack.Push(1150)
+	stack.Push(121)
+	fmt.Println(stack.Pop(), stack.Pop(), stack.Pop(), stack.Pop())
+
 }
