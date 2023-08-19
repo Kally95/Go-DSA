@@ -43,11 +43,17 @@ func main() {
 	// cll.DisplayCircularLL()
 	// fmt.Println(cll.HasCycle())
 
-	stack := ds.NewStack[int]()
-	stack.Push(10)
-	stack.Push(15)
-	stack.Push(1150)
-	stack.Push(121)
-	fmt.Println(stack.Pop(), stack.Pop(), stack.Pop(), stack.Pop())
+	// stack := ds.NewStack[int]()
+	// stack.Push(10)
+	// stack.Push(15)
+	// stack.Push(1150)
+	// stack.Push(121)
+	// fmt.Println(stack.Pop(), stack.Pop(), stack.Pop(), stack.Pop())
 
+	queue := ds.NewQueue[int]()
+	queue.Enqueue(3)
+	queue.Enqueue(23)
+	queue.Enqueue(44)
+	queue.Enqueue(12)
+	fmt.Println(queue.Dequeue(), queue.Dequeue(), queue.Dequeue(), queue.Dequeue())
 }
