@@ -2,57 +2,57 @@ package data_structures
 
 import "fmt"
 
-type node struct {
-	next *node
-	data int
+type Node struct {
+	Next  *Node
+	Value int
 }
 
 type LinkedList struct {
-	head   *node
-	length int
+	Head   *Node
+	Length int
 }
 
 func (l *LinkedList) Prepend(value int) {
-	newNode := node{data: value}
-	if l.head != nil {
-		newNode.next = l.head
-		l.head = &newNode
-		l.length++
+	newNode := Node{Value: value}
+	if l.Head != nil {
+		newNode.Next = l.Head
+		l.Head = &newNode
+		l.Length++
 	} else {
-		l.head = &newNode
-		l.length++
+		l.Head = &newNode
+		l.Length++
 	}
 }
 
 func (l *LinkedList) PrintLinkedList() {
-	if l.head == nil {
+	if l.Head == nil {
 		return
 	}
-	currentNode := l.head
+	currentNode := l.Head
 	for currentNode != nil {
-		fmt.Println(currentNode.data)
-		currentNode = currentNode.next
+		fmt.Println(currentNode.Value)
+		currentNode = currentNode.Next
 	}
 }
 
 func (l *LinkedList) DeleteNodeWithVal(value int) {
-	if l.length == 0 {
+	if l.Length == 0 {
 		return
 	}
 
-	if l.head.data == value {
-		l.head = l.head.next
-		l.length--
+	if l.Head.Value == value {
+		l.Head = l.Head.Next
+		l.Length--
 		return
 	}
 
-	previousToDelete := l.head
-	for previousToDelete.next.data != value {
-		if previousToDelete.next.next == nil {
+	previousToDelete := l.Head
+	for previousToDelete.Next.Value != value {
+		if previousToDelete.Next.Next == nil {
 			return
 		}
-		previousToDelete = previousToDelete.next
+		previousToDelete = previousToDelete.Next
 	}
-	previousToDelete.next = previousToDelete.next.next
-	l.length--
+	previousToDelete.Next = previousToDelete.Next.Next
+	l.Length--
 }
