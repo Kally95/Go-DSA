@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 
 	ds "github.com/Kally95/Go-DSA/data_structures"
 )
@@ -50,10 +49,32 @@ func main() {
 	// stack.Push(121)
 	// fmt.Println(stack.Pop(), stack.Pop(), stack.Pop(), stack.Pop())
 
-	queue := ds.NewQueue[int]()
-	queue.Enqueue(3)
-	queue.Enqueue(23)
-	queue.Enqueue(44)
-	queue.Enqueue(12)
-	fmt.Println(queue.Dequeue(), queue.Dequeue(), queue.Dequeue(), queue.Dequeue())
+	// queue := ds.NewQueue[int]()
+	// queue.Enqueue(3)
+	// queue.Enqueue(23)
+	// queue.Enqueue(44)
+	// queue.Enqueue(12)
+	// fmt.Println(queue.Dequeue(), queue.Dequeue(), queue.Dequeue(), queue.Dequeue())
+
+	// bst := ds.NewBST()
+	// bst.Root = ds.InsertRec(bst.Root, 10)
+	// bst.Root = ds.InsertRec(bst.Root, 4)
+	// bst.Root = ds.InsertRec(bst.Root, 2)
+	// bst.Root = ds.InsertRec(bst.Root, 61)
+	// bst.Root = ds.InsertRec(bst.Root, 6)
+	// ds.InOrder(bst.Root)
+
+	tree := ds.NewBinaryTree()
+	tree.Root = &BtNode{value: 10}
+	tree.Root.left.Insert(14, "L")
+	tree.Root.right.Insert(11, "R")
+	tree.Root.left.left.Insert(111, "R")
+	TraverseBT(tree.Root)
+	/*  
+			10
+		   /  \
+		  14  11
+		 /
+		111
+	*/
 }
