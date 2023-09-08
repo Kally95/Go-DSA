@@ -64,13 +64,14 @@ func main() {
 	// bst.Root = ds.InsertRec(bst.Root, 6)
 	// ds.InOrder(bst.Root)
 
-	root := BtNode{data: 1}
-	root.Left = &BtNode{data: 2}
-	root.Right = &BtNode{data: 3}
-	root.Left.Left = &BtNode{data: 4}
-	root.Left.Right = &BtNode{data: 5}
-	root.Right.Left = &BtNode{data: 6}
-	root.Right.Right = &BtNode{data: 7}
+    // Create a binary tree.
+    root := &ds.BtNode{Data: 1}
+    root.Left = &ds.BtNode{Data: 2}
+    root.Right = &ds.BtNode{Data: 3}
+    root.Left.Left = &ds.BtNode{Data: 4}
+    root.Left.Right = &ds.BtNode{Data: 5}
+    root.Right.Left = &ds.BtNode{Data: 6}
+    root.Right.Right = &ds.BtNode{Data: 7}
 	fmt.Printf("Pre Order Traversal of the given tree is: ")
 	root.PreOrderTraversal()
 }
