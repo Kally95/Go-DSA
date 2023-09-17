@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	ds "github.com/Kally95/Go-DSA/data_structures"
 )
 
@@ -50,10 +48,32 @@ func main() {
 	// stack.Push(121)
 	// fmt.Println(stack.Pop(), stack.Pop(), stack.Pop(), stack.Pop())
 
-	queue := ds.NewQueue[int]()
-	queue.Enqueue(3)
-	queue.Enqueue(23)
-	queue.Enqueue(44)
-	queue.Enqueue(12)
-	fmt.Println(queue.Dequeue(), queue.Dequeue(), queue.Dequeue(), queue.Dequeue())
+	// queue := ds.NewQueue[int]()
+	// queue.Enqueue(3)
+	// queue.Enqueue(23)
+	// queue.Enqueue(44)
+	// queue.Enqueue(12)
+	// fmt.Println(queue.Dequeue(), queue.Dequeue(), queue.Dequeue(), queue.Dequeue())
+
+	// bst := ds.NewBST()
+	// bst.Root = ds.InsertRec(bst.Root, 10)
+	// bst.Root = ds.InsertRec(bst.Root, 4)
+	// bst.Root = ds.InsertRec(bst.Root, 2)
+	// bst.Root = ds.InsertRec(bst.Root, 61)
+	// bst.Root = ds.InsertRec(bst.Root, 6)
+	// ds.InOrder(bst.Root)
+
+	// Create a binary tree.
+	root := &ds.BtNode{Data: 1}
+	root.Left = &ds.BtNode{Data: 2}
+	root.Right = &ds.BtNode{Data: 3}
+	root.Left.Left = &ds.BtNode{Data: 4}
+	root.Left.Right = &ds.BtNode{Data: 5}
+	root.Right.Left = &ds.BtNode{Data: 6}
+	root.Right.Right = &ds.BtNode{Data: 7}
+
+	root.PostOrderTraversal()
+	root.InOrderTraversal()
+	root.PreOrderTraversal()
+
 }
