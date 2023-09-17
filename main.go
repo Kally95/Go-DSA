@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	ds "github.com/Kally95/Go-DSA/data_structures"
 )
 
@@ -64,14 +63,17 @@ func main() {
 	// bst.Root = ds.InsertRec(bst.Root, 6)
 	// ds.InOrder(bst.Root)
 
-    // Create a binary tree.
-    root := &ds.BtNode{Data: 1}
-    root.Left = &ds.BtNode{Data: 2}
-    root.Right = &ds.BtNode{Data: 3}
-    root.Left.Left = &ds.BtNode{Data: 4}
-    root.Left.Right = &ds.BtNode{Data: 5}
-    root.Right.Left = &ds.BtNode{Data: 6}
-    root.Right.Right = &ds.BtNode{Data: 7}
-	fmt.Printf("Pre Order Traversal of the given tree is: ")
+	// Create a binary tree.
+	root := &ds.BtNode{Data: 1}
+	root.Left = &ds.BtNode{Data: 2}
+	root.Right = &ds.BtNode{Data: 3}
+	root.Left.Left = &ds.BtNode{Data: 4}
+	root.Left.Right = &ds.BtNode{Data: 5}
+	root.Right.Left = &ds.BtNode{Data: 6}
+	root.Right.Right = &ds.BtNode{Data: 7}
+
+	root.PostOrderTraversal()
+	root.InOrderTraversal()
 	root.PreOrderTraversal()
+
 }
